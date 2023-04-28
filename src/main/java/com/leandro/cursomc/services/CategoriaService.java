@@ -24,12 +24,6 @@ public class CategoriaService {
 				"Objeto não encontrado! Id: " + id + ", Tipo: " + Categoria.class.getName()));
 	}
 	
-	public List<Categoria> findAll() {
-		return repo.findAll();
-//		return obj.orElseThrow(() -> new ObjectNotFoundException(
-//				"Objeto não encontrado! Id: " + id + ", Tipo: " + Categoria.class.getName()));
-	}
-	
 	public Categoria insert(Categoria obj) {
 		obj.setId(null);
 		return repo.save(obj);
@@ -50,5 +44,10 @@ public class CategoriaService {
 		}
 		
 	}
+	
+	public List<Categoria> findAll() {
+		return repo.findAll();
+	}
+	
 	
 }
